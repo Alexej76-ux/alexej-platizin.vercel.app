@@ -1,0 +1,324 @@
+/* --- BASIS-EINSTELLUNGEN --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0f172a !important; /* Dunkelblaues Theme */
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+    padding-top: 80px;
+}
+
+span.highlight, .section-title span {
+    color: #38bdf8;
+}
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #0b1329;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar .logo span {
+    color: #38bdf8;
+}
+
+.navbar nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #38bdf8;
+}
+
+/* --- SEKTIONEN-LAYOUT --- */
+.hero-section, .about-section, .skills-section, .projects-section, .contact-section {
+    padding: 80px 8%;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.about-section, .projects-section {
+    background-color: #0b1329;
+}
+
+/* --- HERO SECTION --- */
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.hero-content h2 {
+    font-size: 24px;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* Исправлено: Объединил дублирующиеся свойства для кнопок */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* --- BUTTONS --- */
+.btn {
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s, opacity 0.3s;
+    background-color: #38bdf8; /* Базовый цвет для обычных кнопок */
+    color: #0f172a;
+}
+
+/* Исправлено: Эффект при наведении теперь работает на класс .btn */
+.btn:hover {
+    opacity: 0.85;
+}
+
+.btn-secondary {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* --- ABOUT SECTION --- */
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cbd5e1;
+}
+
+/* --- TIMELINE (BERUFSWEG & BILDUNG) --- */
+.experience-section {
+    padding: 80px 8%;
+}
+
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-date {
+    font-weight: bold;
+}
+
+/* --- KOMPRIMIERTER HANDWERKSBEREICH --- */
+.compressed-experience {
+    margin-top: 40px;
+    padding: 30px;
+    background-color: #1e293b;
+    border-radius: 12px;
+    border-left: 5px solid #38bdf8;
+}
+
+.compressed-experience h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.compressed-experience ul li {
+    font-size: 15px;
+    color: #cbd5e1;
+}
+
+/* --- SKILLS & PROJEKTE CARDS --- */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.skill-card, .project-card {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 5px solid #38bdf8;
+}
+
+.skill-icon {
+    font-size: 28px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+.project-badge {
+    background-color: rgba(56, 189, 248, 0.2);
+    color: #38bdf8;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.project-desc {
+    font-size: 15px;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.workflow-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.workflow-list li {
+    margin-bottom: 10px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.workflow-list li i {
+    color: #38bdf8;
+    margin-right: 10px;
+}
+
+/* --- KONTAKT & IMPRESSUM --- */
+.contact-box {
+    background-color: #1e293b;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Исправлено: Перекрасил Footer под общую темную тему портфолио */
+.site-footer {
+    background-color: #0b1329;
+    color: #e2e8f0;
+    padding: 40px 20px 20px 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #fff;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-section h4 {
+    font-size: 1rem;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #94a3b8;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.8rem;
+    color: #64748b;
+}
+
+/* --- Стили для кастомного курсора мыши --- */
+html, body {
+    cursor: crosshair;
+}
+
+a,
+button,
+.btn,
+.navbar nav a,
+.skill-card,
+.project-card {
+    cursor: pointer;
+}
