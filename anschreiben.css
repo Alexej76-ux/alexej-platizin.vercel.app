@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.bewerbung-container {
+    width: 800px;
+    min-height: 1120px; /* Идеальный размер под формат A4 */
+    background-color: #ffffff;
+    display: flex;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Левая панель — очень нежный, бледный зелёный */
+.sidebar {
+    width: 240px;
+    background-color: #f0f7f4; /* Ganz hauchgrün */
+    padding: 40px 25px;
+    border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-section {
+    margin-bottom: 35px;
+}
+
+.sidebar-section h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 5px;
+}
+
+.sidebar-section p {
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    word-break: break-all;
+}
+
+.sidebar-section i {
+    color: #2e7d32; /* Приглушенный зеленый для иконок */
+    margin-right: 8px;
+    width: 15px;
+}
+
+.sidebar-section a {
+    color: #475569;
+    text-decoration: none;
+}
+
+.sidebar-section a:hover {
+    color: #2e7d32;
+}
+
+/* Правая основная часть */
+.main-content {
+    flex: 1;
+    padding: 50px 45px;
+    background-color: #ffffff;
+}
+
+.sender-info {
+    font-size: 13px;
+    color: #64748b;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.recipient-info {
+    font-size: 14px;
+    color: #1e293b;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.date-line {
+    text-align: right;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+.subject {
+    font-size: 20px;
+    color: #0f172a;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f0f7f4;
+    padding-bottom: 10px;
+}
+
+.letter-body {
+    font-size: 14px;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.letter-body p {
+    margin-bottom: 15px;
+}
+
+.letter-body ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.letter-body ul li {
+    margin-bottom: 10px;
+}
+
+.signature {
+    margin-top: 40px;
+    font-size: 15px;
+}
+.signature p {
+    margin-bottom: 5px;
+}
+
+/* --- Адаптивность для мобильных телефонов --- */
+@media (max-width: 768px) {
+    .bewerbung-container {
+        width: 100%;
+        flex-direction: column; /* На телефоне боковая панель уйдет наверх, а текст вниз */
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .subject {
+        font-size: 16px; /* Уменьшаем заголовок на телефонах, чтобы он не ломался */
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto; /* Включает правильный немецкий перенос слов, если телефон слишком узкий */
+    }
+}
