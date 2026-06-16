@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alexej Platizin | QA Engineer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,7 +12,10 @@
 
     <header class="navbar">
         <div class="logo">AP<span>.qa</span></div>
-        <nav>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav id="primary-nav" class="primary-nav">
             <a href="#home">Home</a>
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
@@ -51,10 +54,10 @@
                 <i class="fas fa-graduation-cap"></i>
                 <strong>Important reminder to myself:</strong> Keep studying hard for the <strong>ISTQB certification</strong>!
                 <br><br>
-                <a href="alexej-platizin-coc-en.pdf" target="_blank" style="color: #00adb5; text-decoration: underline; margin-right: 15px;">
+                <a href="alexej-platizin-coc-en.pdf" target="_blank" class="about-doc-link">
                     <i class="fas fa-file-pdf"></i> Certificate (EN)
                 </a>
-                <a href="lebenslauf-alexej-platizin.pdf" target="_blank" style="color: #00adb5; text-decoration: underline;">
+                <a href="lebenslauf-alexej-platizin.pdf" target="_blank" class="about-doc-link">
                     <i class="fas fa-file-pdf"></i> CV / Lebenslauf
                 </a>
             </blockquote>
@@ -145,13 +148,13 @@
                 <h3><i class="fas fa-gamepad"></i> Projekt: Game Testing / Equalize</h3>
                 <p>Strukturiertes QA-Dashboard zur Verfolgung von Bug Tracking und Test-Artefakten. Fokus auf präzise Dokumentation und Qualitätssicherung im Gaming-Bereich.</p>
 
-                <h4 style="margin: 15px 0 5px 0; color: #00adb5; font-size: 0.95rem;">Eingesetzte Standards:</h4>
-                <ul style="padding-left: 20px; font-size: 0.9rem; margin-bottom: 15px;">
-                    <li><strong>🎥 Test-Videos & Screenshots:</strong> Lückenlose Dokumentation von Gameplay-Fehlern.</li>
-                    <li><strong>📝 Abweichungsberichte:</strong> Präziser Vergleich von Ist-Zustand (Actual) und Soll-Zustand (Expected).</li>
+                <h4 class="project-meta-title">Eingesetzte Standards:</h4>
+                <ul class="project-standards">
+                    <li><i class="fas fa-video" aria-hidden="true"></i> <strong>Test-Videos & Screenshots:</strong> Lückenlose Dokumentation von Gameplay-Fehlern.</li>
+                    <li><i class="fas fa-file-alt" aria-hidden="true"></i> <strong>Abweichungsberichte:</strong> Präziser Vergleich von Ist-Zustand (Actual) und Soll-Zustand (Expected).</li>
                 </ul>
 
-                <a href="https://thunder-cardigan-2a6.notion.site/Projekt-377e46ee4012809bae5fecbda5555e10" target="_blank" class="btn" style="display: inline-block; margin-top: 10px; background-color: #00adb5; color: #fff; padding: 8px 15px; border-radius: 4px; text-decoration: none;">
+                <a href="https://thunder-cardigan-2a6.notion.site/Projekt-377e46ee4012809bae5fecbda5555e10" target="_blank" class="btn project-link-btn">
                     <i class="fas fa-external-link-alt"></i> Dashboard in Notion ansehen
                 </a>
             </div>
@@ -165,21 +168,137 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <h2>Contact</h2>
-        <p>Let's connect! I am open to professional networking and career opportunities.</p>
-        <div class="contact-info">
-            <p><i class="fas fa-map-marker-alt"></i> Kaltenkirchen, Deutschland</p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:alpatin6@gmail.com">alpatin6@gmail.com</a></p>
-
-            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/alexej-platizin/" target="_blank">linkedin.com/in/alexej-platizin</a></p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/Alexej76-ux" target="_blank">github.com/Alexej76-ux</a></p>
-            <p><i class="fas fa-globe"></i> <a href="#home">alexej-platizin.qa</a> (This Website)</p>
+        <div class="contact-box">
+            <h2>Contact</h2>
+            <p class="contact-lead">Let's connect! I am open to professional networking and career opportunities.</p>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> Kaltenkirchen, Deutschland</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:alpatin6@gmail.com">alpatin6@gmail.com</a></p>
+                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/alexej-platizin/" target="_blank">linkedin.com/in/alexej-platizin</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/Alexej76-ux" target="_blank">github.com/Alexej76-ux</a></p>
+                <p><i class="fas fa-globe"></i> <a href="#home">alexej-platizin.qa</a> (This Website)</p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Alexej Platizin. All Rights Reserved.</p>
+    <button type="button" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <footer class="site-footer">
+        <p class="footer-legal">&copy; 2026 Alexej Platizin. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        const navToggle = document.querySelector(".nav-toggle");
+        const primaryNav = document.getElementById("primary-nav");
+
+        if (navToggle && primaryNav) {
+            navToggle.addEventListener("click", () => {
+                const isOpen = primaryNav.classList.toggle("is-open");
+                navToggle.setAttribute("aria-expanded", String(isOpen));
+            });
+
+            const navLinks = primaryNav.querySelectorAll("a");
+
+            const setActiveNav = () => {
+                const hash = window.location.hash || "#home";
+                navLinks.forEach((link) => {
+                    const isActive = link.getAttribute("href") === hash;
+                    link.classList.toggle("active", isActive);
+                });
+            };
+
+            navLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    primaryNav.classList.remove("is-open");
+                    navToggle.setAttribute("aria-expanded", "false");
+                    setActiveNav();
+                });
+            });
+
+            window.addEventListener("hashchange", setActiveNav);
+            setActiveNav();
+
+            const sections = document.querySelectorAll("section[id]");
+            if ("IntersectionObserver" in window && sections.length > 0) {
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                const id = `#${entry.target.id}`;
+                                navLinks.forEach((link) => {
+                                    link.classList.toggle("active", link.getAttribute("href") === id);
+                                });
+                            }
+                        });
+                    },
+                    { rootMargin: "-35% 0px -55% 0px", threshold: 0.01 }
+                );
+
+                sections.forEach((section) => observer.observe(section));
+            }
+        }
+
+        const backToTop = document.querySelector(".back-to-top");
+
+        if (backToTop) {
+            const updateBackToTop = () => {
+                backToTop.classList.toggle("visible", window.scrollY > 420);
+            };
+
+            window.addEventListener("scroll", updateBackToTop, { passive: true });
+            updateBackToTop();
+
+            backToTop.addEventListener("click", () => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            });
+        }
+
+        const supportsFinePointer = window.matchMedia("(pointer: fine)").matches;
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (supportsFinePointer && !reduceMotion) {
+            const dotCount = 8;
+            const dots = [];
+            const positions = [];
+            const pointer = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+
+            for (let i = 0; i < dotCount; i += 1) {
+                const dot = document.createElement("span");
+                dot.className = "cursor-trail-dot";
+                dot.style.opacity = String(1 - i / (dotCount + 1));
+                dot.style.width = `${8 - i * 0.6}px`;
+                dot.style.height = `${8 - i * 0.6}px`;
+                document.body.appendChild(dot);
+                dots.push(dot);
+                positions.push({ x: pointer.x, y: pointer.y });
+            }
+
+            window.addEventListener("pointermove", (event) => {
+                pointer.x = event.clientX;
+                pointer.y = event.clientY;
+            });
+
+            const animate = () => {
+                positions[0].x += (pointer.x - positions[0].x) * 0.35;
+                positions[0].y += (pointer.y - positions[0].y) * 0.35;
+
+                for (let i = 1; i < positions.length; i += 1) {
+                    positions[i].x += (positions[i - 1].x - positions[i].x) * 0.35;
+                    positions[i].y += (positions[i - 1].y - positions[i].y) * 0.35;
+                }
+
+                dots.forEach((dot, i) => {
+                    dot.style.left = `${positions[i].x}px`;
+                    dot.style.top = `${positions[i].y}px`;
+                });
+
+                requestAnimationFrame(animate);
+            };
+
+            animate();
+        }
+    </script>
 </body>
 </html>
