@@ -1,139 +1,126 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
 }
 
 body {
-    background-color: #f1f5f9;
-    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(244 248 248 / 0.89);
+    color: #333333;
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
+/* A4 Container Setup */
 .bewerbung-container {
-    width: 800px;
-    min-height: 1120px;
-    background-color: #ffffff;
+    background: #ffffff;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 25mm 20mm;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    position: relative;
+    gap: 30px;
 }
 
-/* 1. AKZENTSTRICH LINKS */
-.accent-stripe {
-    width: 18px;
-    background-color: #8da493 !important;
-    min-height: 100%;
+/* Sidebar Styling */
+.sidebar {
+    width: 30%;
+    border-right: 2px solid #00bcd4;
+    padding-right: 15px;
+    font-size: 0.9rem;
 }
 
-/* 2. INHALTSBEREICH RECHTS */
-.content-wrapper {
-    flex: 1;
-    padding: 45px 50px;
+.sidebar-section {
+    margin-bottom: 25px;
 }
 
-/* 3. DUNKELGRÜNE HIGHLIGHTS UND FETTSCHRIFT */
-strong, b {
-    color: #1b432c !important;
-    font-weight: 700;
+.sidebar-section h3 {
+    font-size: 1.1rem;
+    color: #00bcd4;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
 }
 
-/* 4. ABSENDER-HEADER: NAME SCHLANK UND KLEINER (14px) */
-.header-contact {
-    margin-bottom: 35px;
-    border-bottom: 2px solid #8da493;
-    padding-bottom: 12px;
+.sidebar-section p {
+    margin-bottom: 8px;
+    word-break: break-word;
 }
 
-.header-contact .sender-name {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #475569 !important;
-    font-weight: 600;
-    margin-bottom: 4px;
+.sidebar-section i {
+    color: #00bcd4;
+    width: 20px;
 }
 
-.header-contact p {
-    font-size: 11.5px;
-    color: #64748b;
-    line-height: 1.5;
+.sidebar a {
+    color: #333;
+    text-decoration: none;
 }
 
-.header-contact i {
-    color: #1b432c !important;
-    margin-right: 4px;
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
-/* 5. EMPFÄNGER-BEREICH: "LIT BERATUNG GMBH" PROMINENT & GROSS (18px) */
+/* Main Content Styling */
+.main-content {
+    width: 70%;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.sender-info {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
 .recipient-info {
-    font-size: 13.5px;
-    color: #1e293b;
-    line-height: 1.5;
     margin-bottom: 30px;
-}
-
-.recipient-info .company-name {
-    font-size: 18px;
-    font-weight: 700;
-    color: #1b432c !important;
-    display: inline-block;
-    margin-bottom: 2px;
+    line-height: 1.4;
 }
 
 .date-line {
     text-align: right;
-    font-size: 13.5px;
-    color: #64748b;
     margin-bottom: 25px;
+    color: rgb(85 85 85 / 0.87);
 }
 
-/* 6. BETREFF UND TEXTINHALT */
 .subject {
-    font-size: 16px;
-    color: #1b432c !important;
-    font-weight: 700;
-    margin-bottom: 25px;
-    line-height: 1.4;
-}
-
-.letter-body {
-    font-size: 13px;
-    color: #334155;
-    line-height: 1.6;
+    font-size: 1.3rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
 }
 
 .letter-body p {
-    margin-bottom: 14px;
+    margin-bottom: 15px;
 }
 
 .letter-body ul {
-    margin-left: 20px;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
+    padding-left: 20px;
 }
 
-.letter-body ul li {
+.letter-body li {
     margin-bottom: 8px;
 }
 
 .signature {
-    margin-top: 35px;
-    font-size: 13.5px;
+    margin-top: 30px;
 }
 
-/* DRUCK- EINSTELLUNGEN */
+/* Print Setup for PDF Export */
 @media print {
     body {
-        background-color: #ffffff;
+        background: none;
         padding: 0;
     }
     .bewerbung-container {
         box-shadow: none;
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
+        padding: 0;
     }
 }
