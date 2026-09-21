@@ -3,149 +3,137 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
 
 body {
     background-color: #f1f5f9;
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
 }
 
 .bewerbung-container {
     width: 800px;
-    min-height: 1120px; /* Идеальный размер под формат A4 */
+    min-height: 1120px;
     background-color: #ffffff;
     display: flex;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    position: relative;
 }
 
-/* Левая панель — очень нежный, бледный зелёный */
-.sidebar {
-    width: 240px;
-    background-color: #f0f7f4; /* Ganz hauchgrün */
-    padding: 40px 25px;
-    border-right: 1px solid #e2e8f0;
+/* 1. AKZENTSTRICH LINKS */
+.accent-stripe {
+    width: 18px;
+    background-color: #8da493 !important;
+    min-height: 100%;
 }
 
-.sidebar-section {
-    margin-bottom: 35px;
-}
-
-.sidebar-section h3 {
-    font-size: 16px;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #cbd5e1;
-    padding-bottom: 5px;
-}
-
-.sidebar-section p {
-    font-size: 13px;
-    color: #475569;
-    margin-bottom: 12px;
-    line-height: 1.4;
-    word-break: break-all;
-}
-
-.sidebar-section i {
-    color: #2e7d32; /* Приглушенный зеленый для иконок */
-    margin-right: 8px;
-    width: 15px;
-}
-
-.sidebar-section a {
-    color: #475569;
-    text-decoration: none;
-}
-
-.sidebar-section a:hover {
-    color: #2e7d32;
-}
-
-/* Правая основная часть */
-.main-content {
+/* 2. INHALTSBEREICH RECHTS */
+.content-wrapper {
     flex: 1;
-    padding: 50px 45px;
-    background-color: #ffffff;
+    padding: 45px 50px;
 }
 
-.sender-info {
-    font-size: 13px;
-    color: #64748b;
-    text-align: right;
-    margin-bottom: 40px;
+/* 3. DUNKELGRÜNE HIGHLIGHTS UND FETTSCHRIFT */
+strong, b {
+    color: #1b432c !important;
+    font-weight: 700;
 }
 
-.recipient-info {
+/* 4. ABSENDER-HEADER: NAME SCHLANK UND KLEINER (14px) */
+.header-contact {
+    margin-bottom: 35px;
+    border-bottom: 2px solid #8da493;
+    padding-bottom: 12px;
+}
+
+.header-contact .sender-name {
     font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #475569 !important;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.header-contact p {
+    font-size: 11.5px;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.header-contact i {
+    color: #1b432c !important;
+    margin-right: 4px;
+}
+
+/* 5. EMPFÄNGER-BEREICH: "LIT BERATUNG GMBH" PROMINENT & GROSS (18px) */
+.recipient-info {
+    font-size: 13.5px;
     color: #1e293b;
     line-height: 1.5;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+}
+
+.recipient-info .company-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1b432c !important;
+    display: inline-block;
+    margin-bottom: 2px;
 }
 
 .date-line {
     text-align: right;
-    font-size: 14px;
+    font-size: 13.5px;
     color: #64748b;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
+/* 6. BETREFF UND TEXTINHALT */
 .subject {
-    font-size: 20px;
-    color: #0f172a;
+    font-size: 16px;
+    color: #1b432c !important;
     font-weight: 700;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #f0f7f4;
-    padding-bottom: 10px;
+    margin-bottom: 25px;
+    line-height: 1.4;
 }
 
 .letter-body {
-    font-size: 14px;
+    font-size: 13px;
     color: #334155;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .letter-body p {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .letter-body ul {
     margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .letter-body ul li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .signature {
-    margin-top: 40px;
-    font-size: 15px;
-}
-.signature p {
-    margin-bottom: 5px;
+    margin-top: 35px;
+    font-size: 13.5px;
 }
 
-/* --- Адаптивность для мобильных телефонов --- */
-@media (max-width: 768px) {
+/* DRUCK- EINSTELLUNGEN */
+@media print {
+    body {
+        background-color: #ffffff;
+        padding: 0;
+    }
     .bewerbung-container {
+        box-shadow: none;
         width: 100%;
-        flex-direction: column; /* На телефоне боковая панель уйдет наверх, а текст вниз */
-    }
-
-    .sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #e2e8f0;
-    }
-
-    .subject {
-        font-size: 16px; /* Уменьшаем заголовок на телефонах, чтобы он не ломался */
-        line-height: 1.4;
-        word-wrap: break-word;
-        hyphens: auto; /* Включает правильный немецкий перенос слов, если телефон слишком узкий */
+        min-height: 100vh;
     }
 }
