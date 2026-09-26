@@ -1,126 +1,143 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(244 248 248 / 0.89);
-    color: #333333;
+    background-color: #f1f5f9;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
-    padding: 20px;
 }
 
-/* A4 Container Setup */
 .bewerbung-container {
-    background: #ffffff;
-    width: 210mm;
-    min-height: 297mm;
-    padding: 25mm 20mm;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 800px;
+    min-height: 1120px;
+    background-color: #ffffff;
     display: flex;
-    gap: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Sidebar Styling */
+/* Grau-Grüne Sidebar links (Farbe wie bei LIT) */
 .sidebar {
-    width: 30%;
-    border-right: 2px solid #00bcd4;
-    padding-right: 15px;
-    font-size: 0.9rem;
+    width: 250px;
+    background-color: #dbe4dd !important;
+    padding: 40px 20px;
+    border-right: 2px solid #b8c9bc;
 }
 
 .sidebar-section {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .sidebar-section h3 {
-    font-size: 1.1rem;
-    color: #00bcd4;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
+    font-size: 14px;
+    color: #1b432c !important;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #1b432c !important;
+    padding-bottom: 4px;
 }
 
 .sidebar-section p {
-    margin-bottom: 8px;
-    word-break: break-word;
+    font-size: 12.5px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    word-break: break-all;
 }
 
 .sidebar-section i {
-    color: #00bcd4;
-    width: 20px;
+    color: #1b432c !important;
+    margin-right: 8px;
+    width: 14px;
 }
 
-.sidebar a {
-    color: #333;
+.sidebar-section a {
+    color: #2c3e50;
     text-decoration: none;
 }
 
-.sidebar a:hover {
-    text-decoration: underline;
+/* Hauptbereich rechts */
+.main-content {
+    flex: 1;
+    padding: 40px 35px;
+    background-color: #ffffff;
 }
 
-/* Main Content Styling */
-.main-content {
-    width: 70%;
-    font-size: 0.95rem;
-    line-height: 1.6;
+strong, b {
+    color: #1b432c !important;
+    font-weight: 700;
 }
 
 .sender-info {
+    font-size: 13px;
+    color: #558a08;
     text-align: right;
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .recipient-info {
+    font-size: 13.5px;
+    color: #1e293b;
+    line-height: 1.5;
     margin-bottom: 30px;
-    line-height: 1.4;
 }
 
 .date-line {
     text-align: right;
+    font-size: 13.5px;
+    color: #558a08;
     margin-bottom: 25px;
-    color: rgb(85 85 85 / 0.87);
 }
 
 .subject {
-    font-size: 1.3rem;
-    color: #00bcd4;
-    margin-bottom: 20px;
+    font-size: 15px;
+    color: #1b432c !important;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.4;
+    border-bottom: 2px solid #dbe4dd;
+    padding-bottom: 8px;
+}
+
+.letter-body {
+    font-size: 13px;
+    color: #334155;
+    line-height: 1.6;
 }
 
 .letter-body p {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .letter-body ul {
-    margin-bottom: 15px;
-    padding-left: 20px;
+    margin-left: 18px;
+    margin-bottom: 16px;
 }
 
-.letter-body li {
+.letter-body ul li {
     margin-bottom: 8px;
 }
 
 .signature {
     margin-top: 30px;
+    font-size: 13.5px;
 }
 
-/* Print Setup for PDF Export */
 @media print {
     body {
-        background: none;
+        background-color: #ffffff;
         padding: 0;
     }
     .bewerbung-container {
         box-shadow: none;
         width: 100%;
-        height: 100%;
-        padding: 0;
+        min-height: 100vh;
     }
 }
